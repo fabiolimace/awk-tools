@@ -26,6 +26,8 @@ Content of `example.txt`:
     %% key3
     value3
 
+The Cookie-Jar Format is defined in The Art of Unix Programming, by Eric S. Raymond. Read the definition of Cookie-Jar and Record-Jar in [record-jar.md](record-jar.md).
+
 Demonstration
 ----------------------------------
 
