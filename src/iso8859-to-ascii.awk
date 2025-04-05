@@ -1,17 +1,138 @@
-#!/bin/sh
 
-# 
-# description
-# 
+// {
 
-parameter1=${1:-default}
-parameter2=${2:-default}
+    # WINDOWS-1252 Charset
+    gsub(/\x80/,"EUR", $0);
+    gsub(/\x81/,"\x1A", $0);
+    gsub(/\x82/,"'", $0);
+    gsub(/\x83/,"f", $0);
+    gsub(/\x84/,"\"", $0);
+    gsub(/\x85/,"...", $0);
+    gsub(/\x86/,"\x1A", $0);
+    gsub(/\x87/,"\x1A", $0);
+    gsub(/\x88/,"^", $0);
+    gsub(/\x89/,"\x1A", $0);
+    gsub(/\x8A/,"S", $0);
+    gsub(/\x8B/,"'", $0);
+    gsub(/\x8C/,"OE", $0);
+    gsub(/\x8D/,"\x1A", $0);
+    gsub(/\x8E/,"Z", $0);
+    gsub(/\x8F/,"\x1A", $0);
+    gsub(/\x90/,"\x1A", $0);
+    gsub(/\x91/,"'", $0);
+    gsub(/\x92/,"'", $0);
+    gsub(/\x93/,"\"", $0);
+    gsub(/\x94/,"\"", $0);
+    gsub(/\x95/,"*", $0);
+    gsub(/\x96/,"-", $0);
+    gsub(/\x97/,"--", $0);
+    gsub(/\x98/,"~", $0);
+    gsub(/\x99/,"(TM)", $0);
+    gsub(/\x9A/,"s", $0);
+    gsub(/\x9B/,"'", $0);
+    gsub(/\x9C/,"oe", $0);
+    gsub(/\x9D/,"\x1A", $0);
+    gsub(/\x9E/,"z", $0);
+    gsub(/\x9F/,"Y", $0);
 
-function main {
-    local p1=${1:-default}
-    local p2=${2:-default}
+    # ISO-8859-1 Charset
+    gsub(/\xA0/," ", $0);
+    gsub(/\xA1/,"\x1A", $0);
+    gsub(/\xA2/,"USc", $0);
+    gsub(/\xA3/,"GBP", $0);
+    gsub(/\xA4/,"\x1A", $0);
+    gsub(/\x95/,"\x1A", $0);
+    gsub(/\x96/,"|", $0);
+    gsub(/\x97/,"\x1A", $0);
+    gsub(/\x98/,"\x1A", $0);
+    gsub(/\xA9/,"(C)", $0);
+    gsub(/\xAA/,"a", $0);
+    gsub(/\xAB/,"\"", $0);
+    gsub(/\xAC/,"\x1A", $0);
+    gsub(/\xAD/,"", $0);
+    gsub(/\xAE/,"(R)", $0);
+    gsub(/\xAF/,"\x1A", $0);
+    gsub(/\xB0/,"o", $0);
+    gsub(/\xB1/,"\x1A", $0);
+    gsub(/\xB2/,"^2", $0);
+    gsub(/\xB3/,"^3", $0);
+    gsub(/\xB4/,"'", $0);
+    gsub(/\xB5/,"\x1A", $0);
+    gsub(/\xB6/,"\x1A", $0);
+    gsub(/\xB7/,"\x1A", $0);
+    gsub(/\xB8/,"\x1A", $0);
+    gsub(/\xB9/,"^1", $0);
+    gsub(/\xBA/,"o", $0);
+    gsub(/\xBB/,"\"", $0);
+    gsub(/\xBC/,"1/4", $0);
+    gsub(/\xBD/,"1/2", $0);
+    gsub(/\xBE/,"3/4", $0);
+    gsub(/\xBF/,"\x1A", $0);
+    gsub(/\xC0/,"A", $0);
+    gsub(/\xC1/,"A", $0);
+    gsub(/\xC2/,"A", $0);
+    gsub(/\xC3/,"A", $0);
+    gsub(/\xC4/,"A", $0);
+    gsub(/\xC5/,"A", $0);
+    gsub(/\xC6/,"AE", $0);
+    gsub(/\xC7/,"C", $0);
+    gsub(/\xC8/,"E", $0);
+    gsub(/\xC9/,"E", $0);
+    gsub(/\xCA/,"E", $0);
+    gsub(/\xCB/,"E", $0);
+    gsub(/\xCC/,"I", $0);
+    gsub(/\xCD/,"I", $0);
+    gsub(/\xCE/,"I", $0);
+    gsub(/\xCF/,"I", $0);
+    gsub(/\xD0/,"D", $0);
+    gsub(/\xD1/,"N", $0);
+    gsub(/\xD2/,"O", $0);
+    gsub(/\xD3/,"O", $0);
+    gsub(/\xD4/,"O", $0);
+    gsub(/\xD5/,"O", $0);
+    gsub(/\xD6/,"O", $0);
+    gsub(/\xD7/,"*", $0);
+    gsub(/\xD8/,"OE", $0);
+    gsub(/\xD9/,"U", $0);
+    gsub(/\xDA/,"U", $0);
+    gsub(/\xDB/,"U", $0);
+    gsub(/\xDC/,"U", $0);
+    gsub(/\xDD/,"Y", $0);
+    gsub(/\xDE/,"TH", $0);
+    gsub(/\xDF/,"ss", $0);
+    gsub(/\xE0/,"a", $0);
+    gsub(/\xE1/,"a", $0);
+    gsub(/\xE2/,"a", $0);
+    gsub(/\xE3/,"a", $0);
+    gsub(/\xE4/,"a", $0);
+    gsub(/\xE5/,"a", $0);
+    gsub(/\xE6/,"ae", $0);
+    gsub(/\xE7/,"c", $0);
+    gsub(/\xE8/,"e", $0);
+    gsub(/\xE9/,"e", $0);
+    gsub(/\xEA/,"e", $0);
+    gsub(/\xEB/,"e", $0);
+    gsub(/\xEC/,"i", $0);
+    gsub(/\xED/,"i", $0);
+    gsub(/\xEE/,"i", $0);
+    gsub(/\xEF/,"i", $0);
+    gsub(/\xF0/,"d", $0);
+    gsub(/\xF1/,"n", $0);
+    gsub(/\xF2/,"o", $0);
+    gsub(/\xF3/,"o", $0);
+    gsub(/\xF4/,"o", $0);
+    gsub(/\xF5/,"o", $0);
+    gsub(/\xF6/,"o", $0);
+    gsub(/\xF7/,"/", $0);
+    gsub(/\xF8/,"oe", $0);
+    gsub(/\xF9/,"u", $0);
+    gsub(/\xFA/,"u", $0);
+    gsub(/\xFB/,"u", $0);
+    gsub(/\xFC/,"u", $0);
+    gsub(/\xFD/,"y", $0);
+    gsub(/\xFE/,"th", $0);
+    gsub(/\xFF/,"y", $0);
     
-    # commands
-}
+    print $0;
 
-main "$parameter1" "$parameter2";
+}
