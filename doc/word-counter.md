@@ -12,7 +12,7 @@ Demonstration
 In this example, the script processes [a text from G1](https://g1.globo.com/to/tocantins/quiz/jovem-consegue-roer-108-pequis-em-dez-minutos-e-vence-concurso-durante-festival-em-gurupi.ghtml).
 
 ```bash
-awk -f `word-counter.awk` input.txt > output.txt
+awk -f word-counter.awk input.txt > output.txt
 ```
 
 This is the input:
