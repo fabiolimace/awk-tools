@@ -1,11 +1,10 @@
 Record-Jar
 ==================================
 
-Descriptio
+Description
 ----------------------------------
 
-
-The `record-jar` script converts Record-Jar formatted files to other formats such as CSV and JSON.
+The `record-jar` program converts Record-Jar formatted files to other formats such as CSV and JSON.
 
 The Record-Jar Format is defined in The Art of Unix Programming, by Eric S. Raymond.
 
@@ -202,7 +201,9 @@ Example with `iana.txt` and `OFFSET=1` (to skip the first lines):
 ]
 ```
 
-Appendix
+------------------------------------
+
+Example files
 ----------------------------------
 
 Contents of `books.txt`:
@@ -297,9 +298,14 @@ Moons: Io
 Moons: Ganymede
 ```
 
-Contents of `the-art-of-unix-programming.md` (for preservation):
+__________________________________
 
-```
+The Art of Unix Programming - Chapter 5. Textuality (for preservation)
+----------------------------------
+
+The following text was extracted from [Eric Raymond's The Art of Unix Programming](http://www.catb.org/esr/writings/taoup/html/ch05s02.html#id2906931), for preservation of Record-Jar and Cookie-Jar definitions.
+__________________________________
+
 The Art of Unix Programming
 ================================================
 
@@ -551,4 +557,4 @@ Any of these solutions (straight text, straight binary, or compressed text) may 
 This having been said, the truly Unixy solution would probably be to fix file(1) to see file prefixes through the compression — and, failing that, to write a shellscript wrapper around file(1) that would interpret compression as a direction to apply gunzip(1) and take a second look.
 
 EOF
-```
+
