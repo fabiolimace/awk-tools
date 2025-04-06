@@ -9,13 +9,14 @@
 #     awk -f tsv-to-markdown.awk input.tsv > output.md
 #
 
-{
+NF {
+    gsub(/\|/ ,"\\|");
     gsub(/\t/ ,"|");
     gsub( /^/ ,"|");
     gsub( /$/ ,"|");
     lines[n++] = $0;
 
-    if (NR == 1) {
+    if (n == 1) {
         gsub(/[^|]/,"-");
         lines[n++] = $0;
     };
