@@ -9,25 +9,21 @@
 #     awk -f tsv-to-markdown.awk input.txt > output.md
 #
 
-BEGIN {
-    n = 1;
-}
-
-NF {
+{
     gsub(/\t/ ,"|");
     gsub( /^/ ,"|");
     gsub( /$/ ,"|");
     lines[n++] = $0;
 
     if (NR == 1) {
-        gsub(/[^\t]/,"-");
+        gsub(/[^|]/,"-");
         lines[n++] = $0;
     };
 }
 
 END {
     # print sorted lines
-    for(i = 1; i <= NR; i++) {
+    for(i = 0; i <= n; i++) {
         if (lines[i]) {
             print lines[i];
         }
