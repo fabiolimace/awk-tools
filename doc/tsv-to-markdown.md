@@ -10,7 +10,7 @@ The first line is interpreted as a table header.
 
 Usage:
 
-     awk -f tsv-to-markdown.awk input.txt > output.md
+     awk -f tsv-to-markdown.awk input.tsv > output.md
 
 Demonstration
 ----------------------------------
@@ -19,7 +19,7 @@ In this exemple, a messed up TSV file is converted into a markdown table:
 
 
 ```
-awk -f tsv-to-markdown.awk input.txt > output.md
+awk -f tsv-to-markdown.awk input.tsv > output.md
 ```
 
 Input file contents:
