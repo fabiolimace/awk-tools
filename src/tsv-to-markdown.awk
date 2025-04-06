@@ -6,7 +6,7 @@
 # The first line is interpreted as a table header.
 #
 # Usage:
-#     awk -f tsv-to-markdown.awk input.txt > output.md
+#     awk -f tsv-to-markdown.awk input.tsv > output.md
 #
 
 {
