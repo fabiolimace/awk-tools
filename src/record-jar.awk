@@ -9,6 +9,9 @@
 # 
 #     ./record-jar.awk -v "FORMAT=csv" planets.txt
 # 
+# TODO: support header in before the first delimiter, like in this example cookie-jar: 
+#       https://raw.githubusercontent.com/espeak-ng/bcp47-data/master/bcp47-extensions
+# 
 # Parameters:
 # 
 #  *  FORMAT: one of these values: `csv`, `ssv`, `psv`, `tsv`, `json`. The default format is `csv`.
