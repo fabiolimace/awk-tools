@@ -96,6 +96,18 @@ function load_formats() {
 	
 	# Date and time ISO
 	push_formats("DI=^[[:digit:]]{4}([-][[:digit:]]{2}){2}([T][[:digit:]]{2}[:][[:digit:]]{2}([:][[:digit:]]{2}([.][[:digit:]]+))(Z|[+-][[:digit:]]{2}))$");
+	
+	# E-mail
+	push_formats("E=^[[:alnum:]-]+(\.[[:alnum:]-]+)*@[[:alnum:]-]+(\.[[:alnum:]-]+)*$");
+	
+	# URL
+	push_formats("U=^(http[s]?|ftp)://[[:alnum:]-]+(\.[[:alnum:]-]+)*(\/[[:alnum:]-]+)*(\/[[:alnum:]%?#&=~,.+-]+)?$");
+	
+	# Hashtag
+	push_formats("H=^#[[:alnum:]]+$");
+	
+	# At tag, aka user tag or mention
+	push_formats("A=^@[[:alnum:]]+$");
 }
 
 BEGIN {
