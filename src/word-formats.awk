@@ -52,8 +52,8 @@ function load_formats() {
 	push_formats("L=^[[:lower:]]+$");
 	# Upper case: "WORD"
 	push_formats("U=^[[:upper:]]+$");
-	# Upper case: "Word"
-	push_formats("C=^[[:upper:]][[:lower:]]+$");
+	# Start case: "Word"
+	push_formats("S=^[[:upper:]][[:lower:]]+$");
 	
 	# Number
 	push_formats("N=^[-]?[[:digit:]]+$");
@@ -66,8 +66,11 @@ function load_formats() {
 	push_formats("LH=^[[:lower:]]+(-([[:lower:]]+|[[:upper:]]+|[[:upper:]][[:lower:]]+))+$");
 	# Upper case with hyphen: "COMPOUND-WORD", "COMPOUND-word", "COMPOUND-Word" and "COMPOUND-WoRd"
 	push_formats("UH=^[[:upper:]]+(-([[:lower:]]+|[[:upper:]]+|[[:upper:]][[:lower:]]+))+$");
-	# Capital case with hyphen: "Compound-Word", "Compound-word", "Compound-WORD" and "Compound-WoRd"
-	push_formats("CH=^[[:upper:]][[:lower:]]+(-([[:lower:]]+|[[:upper:]]+|[[:upper:]][[:lower:]]+))+$");
+	# Start case with hyphen: "Compound-Word", "Compound-word", "Compound-WORD" and "Compound-WoRd"
+	push_formats("SH=^[[:upper:]][[:lower:]]+(-([[:lower:]]+|[[:upper:]]+|[[:upper:]][[:lower:]]+))+$");
+	
+	# Camel case: "compoundWord" "CompoundWord"
+	push_formats("C=^[[:upper:]]?[[:lower:]]+([[:upper:]][[:lower:]]+)+$");
 	
 	# Number with decimal dot (USA)
 	push_formats("ND=^[-]?[[:digit:]]+[.][[:digit:]]+$");
