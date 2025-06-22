@@ -19,7 +19,6 @@ Usage:
 
     gawk -f word-formats.awk input.txt > output.txt
     gawk -f word-spacer.awk input.txt | gawk -f word-formats.awk > output.txt
-    gawk -f word-formats.awk -v CUSTOM_FORMATS="M=US$[0-9.]" input.txt > output.txt
 
 This script only works with GNU's Awk (gawk).
 
