@@ -5,21 +5,19 @@ Description
 ----------------------------------
 
 This script inserts spaces between words and punctuation.
- 
-Example:
-  Input: this is a "example".
-  Output: this is a " example " .
 
-The output is more useful for tokenization.
+Example:
+
+ *  Input:  `This is... a '(very)' ('especial') example!`
+ *  Output: `This is ... a ' ( very ) ' ( ' especial ' ) example !`
+
+The output is useful for tokenization.
 
 Usage:
 
     gawk -f word-spacer.awk input.txt > output.txt
 
-This script only works with GNU's Awk (gawk). Other implementations, such as mawk and busybox, don't work well with multibyte characters (Unicode).
-
-Interesting text about tokenization: https://www.ixopay.com/blog/what-is-nlp-natural-language-processing-tokenization
-
+This script only works with GNU's Awk (gawk).
 
 Demonstration
 ----------------------------------
