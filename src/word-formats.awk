@@ -81,10 +81,10 @@ function load_formats() {
 	# Number with decimal comma and thousands dot (Other countries)
 	push_formats("NCD=^[-]?([[:digit:]]{1,3})?([.][[:digit:]]{3})+[,][[:digit:]]+$");
 	
-	# Percent with punct
-	push_formats("PD=^[+-]?[[:digit:]]+[d][[:digit:]]+%$");
+	# Percent with dot
+	push_formats("PD=^[-]?[[:digit:]]+[.][[:digit:]]+%$");
 	# Percent with comma
-	push_formats("PC=^[+-]?[[:digit:]]+[,][[:digit:]]+%$");
+	push_formats("PC=^[-]?[[:digit:]]+[,][[:digit:]]+%$");
 
 	# Time
 	push_formats("T=^[[:digit:]]{1,2}[:][[:digit:]]{2}$");
@@ -101,10 +101,10 @@ function load_formats() {
 	push_formats("DI=^[[:digit:]]{4}([-][[:digit:]]{2}){2}([T][[:digit:]]{2}[:][[:digit:]]{2}([:][[:digit:]]{2}([.][[:digit:]]+))(Z|[+-][[:digit:]]{2}))$");
 	
 	# E-mail
-	push_formats("E=^[[:alnum:]-]+(\.[[:alnum:]-]+)*@[[:alnum:]-]+(\.[[:alnum:]-]+)*$");
+	push_formats("E=^[[:alnum:]-]+(\\.[[:alnum:]-]+)*@[[:alnum:]-]+(\\.[[:alnum:]-]+)*$");
 	
 	# URL
-	push_formats("U=^(http[s]?|ftp)://[[:alnum:]-]+(\.[[:alnum:]-]+)*(\/[[:alnum:]-]+)*(\/[[:alnum:]%?#&=~,.+-]+)?$");
+	push_formats("R=^(http[s]?|ftp)://[[:alnum:]-]+(\\.[[:alnum:]-]+)*(\\/[[:alnum:]-]+)*(\\/[[:alnum:]%?#&=~,.+-]+)?$");
 	
 	# Hashtag
 	push_formats("H=^#[[:alnum:]]+$");
