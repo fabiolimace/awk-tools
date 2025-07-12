@@ -23,6 +23,8 @@
 # %% key3
 # value3
 #
+# Repository: https://github.com/fabiolimace/awk-tools/
+#
 
 /^%%/ && KEY {
 	if ($2 ~ KEY) {

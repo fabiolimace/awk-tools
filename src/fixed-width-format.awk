@@ -21,6 +21,8 @@
 #
 # Read: https://en.wikipedia.org/wiki/Flat-file_database#Fixed-width_formats
 #
+# Repository: https://github.com/fabiolimace/awk-tools/
+#
 
 BEGIN {
     SEP = SEPARATOR ? SEPARATOR : "\t";

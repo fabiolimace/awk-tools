@@ -8,6 +8,8 @@
 # Usage:
 #     awk -f tsv-to-markdown.awk input.tsv > output.md
 #
+# Repository: https://github.com/fabiolimace/awk-tools/
+#
 
 NF {
     gsub(/\|/ ,"\\|");

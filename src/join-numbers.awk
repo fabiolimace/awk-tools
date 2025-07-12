@@ -3,6 +3,8 @@
 #
 # Join numeric tokens with AWK
 #
+# Repository: https://github.com/fabiolimace/awk-tools/
+#
 
 function join_numbers(    i, n, x) {
 	while (match($0, /[ ][0-9,.()-]+[ ][0-9,.()-]+[ ]?/)) {

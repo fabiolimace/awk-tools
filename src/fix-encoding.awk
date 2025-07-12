@@ -10,6 +10,8 @@
 # *   https://en.wikipedia.org/wiki/Windows-1252
 # *   https://en.wikipedia.org/wiki/ISO/IEC_8859-1
 #
+# Repository: https://github.com/fabiolimace/awk-tools/
+#
 
 {
 	gsub("â‚¬", "€", $0);	# win1252:"0x80" unicode:"U+20AC" utf8:"0xE2 0x82 0xAC"
