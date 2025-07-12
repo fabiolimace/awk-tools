@@ -13,7 +13,11 @@
 #     gawk -f word-positions.awk input.txt > output.txt
 #     gawk -f word-spacer.awk input.txt | gawk -f word-positions.awk > output.txt
 #
+# The table rows are sorted using this command via pipe: `sort -t'	' -k1,1`.
+#
 # This script only works with GNU's Awk (gawk).
+#
+# Repository: https://github.com/fabiolimace/awk-tools/
 #
 
 function insert_token(token) {
@@ -29,9 +33,9 @@ function insert_token(token) {
 }
 
 END {
-    print "TOKEN\tFORMATS";
+    print "TOKEN\tPOSITIONS";
     for (token in positions) {
-        printf "%s\t%s\n", token, positions[token];
+        printf "%s\t%s\n", token, positions[token] | "sort -t'	' -k1,1";
     }
 }
 
